@@ -1,0 +1,28 @@
+package agronegocio;
+
+import javax.swing.JOptionPane;
+
+public class CadastroAgro {
+    
+    public static void main(String[] args) {
+        String nome = JOptionPane.showInputDialog("Digite o seu nome completo: ");
+        String cargo = JOptionPane.showInputDialog("Digite o seu cargo:  ");
+        int telefone = Integer.parseInt(JOptionPane.showInputDialog("Digite o seu telefone: "));
+        String horarioT = JOptionPane.showInputDialog("Digite o seu horÃ¡rio de trabalho: ");
+        String login = JOptionPane.showInputDialog("Crie uma ID de login: ");
+        String senha = JOptionPane.showInputDialog("Crie uma nova senha: "); 
+        String confirmSenha = JOptionPane.showInputDialog("Digite a senha novamente: ");                
+                       
+        if(senha.equals("1234") && confirmSenha.equals("1234")){
+        }else{
+            JOptionPane.showMessageDialog(null, "Senhas diferentes. ");
+        }    
+            
+        if(login.equals("Danilo1".isEmpty()) && confirmSenha.equals("1234".isEmpty())){           
+            JOptionPane.showMessageDialog(null, "Cadastro realizado.");                    
+        }else if(login.equals("Danilo1") && senha.equals("1000")){
+            JOptionPane.showMessageDialog(null, "ID jÃ¡ existente! ");            
+        }                                                            
+    }
+    
+}
