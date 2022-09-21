@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class ProjetoMaturação {
 
     public static void main(String[] args) {
+        
         String nome = JOptionPane.showInputDialog("Digite o seu nome: ");
         String cargo = JOptionPane.showInputDialog("Digite o seu cargo: ");
         int telefone = Integer.parseInt(JOptionPane.showInputDialog("Digite o seu telefone: "));
@@ -15,15 +16,16 @@ public class ProjetoMaturação {
         
         if(login.equals("Danilo1") && senha.equals("1234") && confirmSenha.equals("1234")){           
             JOptionPane.showMessageDialog(null, "Cadastro realizado.");
+            
         }else{
             JOptionPane.showMessageDialog(null, "ID de login já existente.");
         }
+        
         JOptionPane.showMessageDialog(null, "O seu nome é: " + nome);
         JOptionPane.showMessageDialog(null, "O seu cargo é: " + cargo);
         JOptionPane.showMessageDialog(null, "O seu telefone é: " + telefone);
         JOptionPane.showMessageDialog(null, "O seu horário de trabalho é: " + horarioTrabalho);
         JOptionPane.showMessageDialog(null, "O seu login é: " + login);
         JOptionPane.showMessageDialog(null, "A sua senha é: " + senha);
-    }
-    
+    }    
 }
