@@ -1,28 +1,29 @@
-package agronegocio;
+package projetomaturação;
 
 import javax.swing.JOptionPane;
 
-public class CadastroAgro {
-    
+public class ProjetoMaturação {
+
     public static void main(String[] args) {
-        String nome = JOptionPane.showInputDialog("Digite o seu nome completo: ");
-        String cargo = JOptionPane.showInputDialog("Digite o seu cargo:  ");
+        String nome = JOptionPane.showInputDialog("Digite o seu nome: ");
+        String cargo = JOptionPane.showInputDialog("Digite o seu cargo: ");
         int telefone = Integer.parseInt(JOptionPane.showInputDialog("Digite o seu telefone: "));
-        String horarioT = JOptionPane.showInputDialog("Digite o seu horÃ¡rio de trabalho: ");
-        String login = JOptionPane.showInputDialog("Crie uma ID de login: ");
-        String senha = JOptionPane.showInputDialog("Crie uma nova senha: "); 
-        String confirmSenha = JOptionPane.showInputDialog("Digite a senha novamente: ");                
-                       
-        if(senha.equals("1234") && confirmSenha.equals("1234")){
+        String horarioTrabalho = JOptionPane.showInputDialog("Digite o seu horário de trabalho: ");
+        String login = JOptionPane.showInputDialog("Digite uma ID de login: ");
+        String senha = JOptionPane.showInputDialog("Crie uma senha: ");
+        String confirmSenha = JOptionPane.showInputDialog("Confirme a sua senha: ");
+        
+        if(login.equals("Danilo1") && senha.equals("1234") && confirmSenha.equals("1234")){           
+            JOptionPane.showMessageDialog(null, "Cadastro realizado.");
         }else{
-            JOptionPane.showMessageDialog(null, "Senhas diferentes. ");
-        }    
-            
-        if(login.equals("Danilo1".isEmpty()) && confirmSenha.equals("1234".isEmpty())){           
-            JOptionPane.showMessageDialog(null, "Cadastro realizado.");                    
-        }else if(login.equals("Danilo1") && senha.equals("1000")){
-            JOptionPane.showMessageDialog(null, "ID jÃ¡ existente! ");            
-        }                                                            
+            JOptionPane.showMessageDialog(null, "ID de login já existente.");
+        }
+        JOptionPane.showMessageDialog(null, "O seu nome é: " + nome);
+        JOptionPane.showMessageDialog(null, "O seu cargo é: " + cargo);
+        JOptionPane.showMessageDialog(null, "O seu telefone é: " + telefone);
+        JOptionPane.showMessageDialog(null, "O seu horário de trabalho é: " + horarioTrabalho);
+        JOptionPane.showMessageDialog(null, "O seu login é: " + login);
+        JOptionPane.showMessageDialog(null, "A sua senha é: " + senha);
     }
     
 }
